@@ -20,12 +20,12 @@ npm start
 There are basically 6 steps you need to follow.
 
 ### Redux Part
-#####1. Create middleware
+####1. Create middleware
 
 ```
 const middleware = applyMiddleware(createLogger());
 ```
-#####2. Create reducer OR reducers (using combineReducers).
+####2. Create reducer OR reducers (using combineReducers).
 We'll create a single reducer
 
 ```
@@ -41,14 +41,14 @@ const reducer =  (state=initialState, action)=>{
     }
 };
 ```
-#####3. Create the ```STORE```
+####3. Create the ```STORE```
 
 ```
 const store = createStore(reducer,middleware);
 ```
 
 ### React Part
-#####4. Create react component element
+####4. Create react component element
 
 ```
 class TodoElement extends React.Component{
@@ -60,7 +60,7 @@ class TodoElement extends React.Component{
     }
 }
 ```
-#####5. Connect react and redux
+####5. Connect react and redux
 
 ```
 const Todo = connect((state)=>{
@@ -69,7 +69,7 @@ const Todo = connect((state)=>{
     };
 })(TodoElement);
 ```
-#####6. Render react element
+####6. Render react element
 
 ```
 ReactDOM.render(<Provider store={store}><Todo /></Provider>, document.getElementById('root'));
