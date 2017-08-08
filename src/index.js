@@ -47,7 +47,5 @@ const Todo = connect((state)=>{
 })(TodoElement);
 
 //6. Render react element
-ReactDOM.render(<Provider store={store}>
-    <Todo />
-</Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider store={store}><Todo /></Provider>, document.getElementById('root'));
 registerServiceWorker();
