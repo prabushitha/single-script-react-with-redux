@@ -2,6 +2,8 @@
 This project is to understand how redux can be used with react. Everything is in a single script for better understandability.
 When developing a complex redux-react app, you'll need to modularize (eg. components, actions, reducers etc.)
 
+## File: src/index.js
+
 ### Configuaration
 * Clone the project
 ```sh
