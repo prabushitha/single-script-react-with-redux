@@ -24,13 +24,13 @@ There are basically 6 steps you need to follow.
 ### Redux Part
 #### 1. Create middleware
 
-```
+```javascript
 const middleware = applyMiddleware(createLogger());
 ```
 #### 2. Create reducer OR reducers (using combineReducers).
 We'll create a single reducer
 
-```
+```javascript
 const initialState = {
     toggled:false
 };
@@ -45,14 +45,14 @@ const reducer =  (state=initialState, action)=>{
 ```
 #### 3. Create the ```STORE```
 
-```
+```javascript
 const store = createStore(reducer,middleware);
 ```
 
 ### React Part
 #### 4. Create react component element
 
-```
+```javascript
 class TodoElement extends React.Component{
     _toggle(){
         this.props.dispatch({type:"TOGGLE",payload:'content'});
@@ -64,7 +64,7 @@ class TodoElement extends React.Component{
 ```
 #### 5. Connect react and redux
 
-```
+```javascript
 const Todo = connect((state)=>{
     return {
         toggled:state.toggled
@@ -73,7 +73,7 @@ const Todo = connect((state)=>{
 ```
 #### 6. Render react element
 
-```
+```javascript
 ReactDOM.render(<Provider store={store}><Todo /></Provider>, document.getElementById('root'));
 registerServiceWorker();
 ```
