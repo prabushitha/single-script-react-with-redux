@@ -22,7 +22,7 @@ npm start
 There are basically 6 steps you need to follow.
 
 ### Redux Part
-#### 1. Create middleware
+#### 1. Create middleware [Optional : But most of the times you'll need a middleware to make your work easier]
 
 ```javascript
 const middleware = applyMiddleware(createLogger());
