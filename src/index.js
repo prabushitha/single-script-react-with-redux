@@ -1,8 +1,6 @@
 //---------- Redux Integration with React --------------
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
 
 import {applyMiddleware, createStore} from "redux";
 import {createLogger} from 'redux-logger';
@@ -48,4 +46,3 @@ const Todo = connect((state)=>{
 
 //6. Render react element
 ReactDOM.render(<Provider store={store}><Todo /></Provider>, document.getElementById('root'));
-registerServiceWorker();
